@@ -1,0 +1,34 @@
+/* VARIABLES
+------------------------------------------------------------------------------*/
+
+@import "config/variables/colours";
+@import "config/variables/typography";
+@import "config/mixins";
+@import "config/accessibility";
+
+/* MIXINS
+------------------------------------------------------------------------------*/
+
+
+/* THEME BASELINE STYLES
+------------------------------------------------------------------------------*/
+
+@import "base";
+
+/* THEME STRUCTURE
+------------------------------------------------------------------------------*/
+
+@import "structure/header";
+@import "structure/footer";
+@import "structure/paintinglisting";
+@import "structure/printlisting";
+@import "structure/bloglisting";
+@import "structure/frontpage";
+@import "structure/singlepainting";
+@import "structure/singleblog";
+
+/* THEME COMPONENTS
+------------------------------------------------------------------------------*/
+
+@import "components/buttons";
+@import "components/form";

@@ -1,0 +1,39 @@
+.footer,
+footer {
+    &-social nav {
+        justify-content: space-around;
+
+        a {
+            @include set-type(18, 400);
+
+            color: $color-primary;
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: underline;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &-legal {
+        p {
+            @include set-type(10, 100);
+
+            color: $color-grey;
+            text-align: center;
+        }
+    }
+}

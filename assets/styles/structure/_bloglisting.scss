@@ -1,0 +1,48 @@
+.blog-listing {
+    display: block;
+    margin: 20px 0;
+
+    &-container {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 1rem;
+
+        .blog {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            &:nth-child(2n) {
+                
+            }
+
+            &-left {
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+            &-right {
+                padding: 20px;
+                
+                &-top {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                a {
+                    @include set-type(24,600);
+
+                    margin: 20px 0;
+                }
+
+                .medium {
+
+                }
+            }
+        }
+
+        
+    }
+}

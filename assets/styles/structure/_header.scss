@@ -1,0 +1,109 @@
+.header,
+header {
+    &-name  {
+        @include set-type(38, 400);
+
+        font-family: $font-heading;
+        text-align: center;
+    }
+    &-menu .menu {
+        justify-content: center;
+
+        .menu-item {
+            margin: 0 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                @include set-type(14, 400);
+
+                color: $color-black;
+                display: inline-block;
+                padding: 10px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &-bottom {
+        span {
+            @include set-type(16, 400, 40);
+
+            background-color: $color-primary;
+            color: $color-white;
+            letter-spacing: 4px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &.header-mobile {
+            .header-name  {
+                @include set-type(24, 400);
+            }
+
+            .header-menu {
+                .menu {
+                    border-radius: 10px;
+                    display: none;
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+            
+                    .menu-item {
+                        margin: 0 10px;
+                    }
+
+                    &.active {
+                        align-items: center;
+                        display: flex;
+                    }
+                }
+
+                .hamburger {
+                    .open-menu {
+                        display: none;
+                    }
+    
+                    .close-menu {
+                        display: block;
+                        transition: all 0.3s ease-in-out;
+                        -webkit-transition: all 0.3s ease-in-out;
+                    }
+
+                    &.active {
+                        .open-menu {
+                            display: block;
+                            transition: all 0.3s ease-in-out;
+                            -webkit-transition: all 0.3s ease-in-out;
+                        }
+        
+                        .close-menu {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .header-bottom {
+                span {
+                    @include set-type(14, 400, 30);
+                }
+            }
+        }
+    }
+}

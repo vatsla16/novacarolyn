@@ -1,0 +1,22 @@
+.single-blog {
+    &-section {
+        &-title {
+            @include set-type(24, 600);
+
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        &-image img { 
+            display: block;
+            object-fit: cover;
+            height: 40rem;
+            width: 100%;
+        }
+
+        &-desc {
+            margin: 20px 0;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.homepage {
+    .featured {
+        &-section {
+            img {
+                width: 100%;
+            }
+        }
+
+        &-painting-section {
+            text-align: center;
+
+            &-title {
+                @include set-type(24, 600, 30);
+            }
+
+            &-items {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+
+                img {
+                    border-radius: 5px;
+                    height: 300px;
+                    object-fit: cover;
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    .subscription-form {
+        &-title {
+            @include set-type(24, 100);
+
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .nf-form-content nf-fields-wrap {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nf-form-fields-required {
+            display: none;
+        }
+
+        .email-container {
+            label {
+                @include set-type(14, 100);
+            }
+
+            .ninja-forms-req-symbol {
+                color: $color-primary;
+            }
+
+            input {
+                border: 0;
+                border-bottom: 1px solid $color-primary;
+            }
+        }
+        .nf-field-container.submit-container {
+            margin-bottom: 0;
+        
+            .submit-button {
+                @include set-type(14, 600);
+
+                background: transparent;
+                color: $color-primary;
+                padding: 8px 20px;
+                text-decoration: none;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .featured {
+            &-painting-section {
+                ul {
+                    img {
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .featured {
+            &-painting-section {
+                &-items {
+                    flex-direction: column;
+                    
+                    .featured-painting-section-item {
+                        margin: 10px 0;
+
+                        img {
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

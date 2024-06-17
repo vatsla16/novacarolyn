@@ -1,0 +1,41 @@
+button,
+.button {
+    background-color: transparent;
+    border: 0 none;
+    border-radius: 10px;
+    box-shadow: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 300ms ease;
+    
+    &--primary {
+        background: $color-primary;
+        border: 1px solid $color-primary;
+        color: $color-white;
+        padding: 8px 20px;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $color-white;
+            border: 1px solid $color-primary;
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+    &--secondary {
+        background: transparent;
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        padding: 8px 20px;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
