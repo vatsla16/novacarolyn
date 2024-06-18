@@ -72,7 +72,7 @@
         <div class="header-middle pt-3">
             <div class="container">
                 <div class="row header-menu">
-                    <button class="hamburger active" aria-controls="mobile-menu">
+                    <button class="hamburger active mb-4" aria-controls="mobile-menu">
                         <i class="fa-solid fa-bars open-menu" aria-hidden="true"></i>
                         <i class="fa-solid fa-x close-menu" aria-hidden="true"></i>
                         <span class="webaim-hidden">
