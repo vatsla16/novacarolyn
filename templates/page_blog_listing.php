@@ -35,15 +35,13 @@ $blog_query = new WP_Query($blog_args);
                                 </a>
                             </div>
                             <div class="blog-right">
-                                <div class="blog-right-top">
+                                <div class="blog-right-top card-body">
                                     <a class="reverse-hover" href="<?php echo esc_url( $permalink ); ?>"><?php echo $title; ?></a>
                                     <span class="summary"><?php echo $summary; ?></span>
                                 </div>
                                 <?php if ( $mediums) : ?>
-                                    <span class="medium">
-                                        <?php foreach( $mediums as $medium ): ?>
-                                        <?php echo $medium; ?>
-                                        <?php endforeach; ?>
+                                    <span class="medium card-footer">
+                                        <?php echo implode( ' | ', $mediums ); ?>
                                     </span>
                                 <?php endif; ?>
                             </div>

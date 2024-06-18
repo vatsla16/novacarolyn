@@ -91,8 +91,6 @@
             </div>
         </div>
         <div class="header-bottom">
-            <div class="row align-items-center">
-                <span>Pictou's Master of Colour</span>
-            </div>
+            <span>Pictou's Master of Colour</span>
         </div>
 	</header>

@@ -2,7 +2,10 @@
     &-section {
         &-title {
             @include set-type(24, 600);
+        }
 
+        &-title, 
+        .medium {
             display: block;
             margin-bottom: 20px;
             text-align: center;
@@ -16,7 +19,7 @@
         }
 
         &-desc {
-            margin: 20px 0;
+            margin: 50px 0;
         }
     }
 }

@@ -14,7 +14,7 @@
         }
 
         &-left {
-            span {
+            .title {
                 @include set-type(24, 600);
 
                 display: block;

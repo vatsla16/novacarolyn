@@ -11,10 +11,6 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
 
-            &:nth-child(2n) {
-                
-            }
-
             &-left {
                 img {
                     object-fit: cover;
@@ -38,7 +34,10 @@
                 }
 
                 .medium {
-
+                    position: absolute;
+                    bottom: 5%;
+                    background-color: transparent;
+                    border: 0;
                 }
             }
         }
