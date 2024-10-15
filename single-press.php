@@ -18,9 +18,9 @@ get_header();
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                     </div>
                     <div class="single-painting-section-left single-press-section-left">
-                        <span class="title"><?php echo $title; ?></span>
-                        <small class="date"><?php echo $date; ?></small>
-                        <span><?php echo $description; ?></span>
+                        <?php if ($title): ?><span class="title"><?php echo $title; ?></span><?php endif; ?>
+                        <?php if ($date): ?><small class="date"><?php echo $date; ?></small><?php endif; ?>
+                        <?php if ($description): ?><span><?php echo $description; ?></span><?php endif; ?>
                     </div>
                 </div>
             </div>

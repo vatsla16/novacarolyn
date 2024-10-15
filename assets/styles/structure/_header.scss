@@ -57,25 +57,53 @@ header {
                 @include set-type(24, 400);
             }
 
-            .header-menu {
-                .menu {
-                    border-radius: 10px;
-                    display: none;
-                    flex-direction: column;
-                    text-align: center;
-                    width: 100%;
+            // .header-menu {
+            //     .menu {
+            //         border-radius: 10px;
+            //         display: none;
+            //         flex-direction: column;
+            //         text-align: center;
+            //         width: 100%;
             
-                    .menu-item {
-                        margin: 0 10px;
-                    }
+            //         .menu-item {
+            //             margin: 0 10px;
+            //         }
 
-                    &.active {
-                        align-items: center;
-                        display: flex;
-                    }
-                }
+            //         &.active {
+            //             align-items: center;
+            //             display: flex;
+            //         }
+            //     }
 
+            //     .hamburger {
+            //         .open-menu {
+            //             display: none;
+            //         }
+    
+            //         .close-menu {
+            //             display: block;
+            //             transition: all 0.3s ease-in-out;
+            //             -webkit-transition: all 0.3s ease-in-out;
+            //         }
+
+            //         &.active {
+            //             .open-menu {
+            //                 display: block;
+            //                 transition: all 0.3s ease-in-out;
+            //                 -webkit-transition: all 0.3s ease-in-out;
+            //             }
+        
+            //             .close-menu {
+            //                 display: none;
+            //             }
+            //         }
+            //     }
+            // }
+            .header-menu {
                 .hamburger {
+                    width: 100%;
+                    text-align: end;
+
                     .open-menu {
                         display: none;
                     }
@@ -96,6 +124,31 @@ header {
                         .close-menu {
                             display: none;
                         }
+                    }
+                }
+            }
+            .nav-header-menu-mobile {
+                padding-top: 20px;
+
+                .menu {
+                    border-radius: 10px;
+                    display: none;
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+                    padding: 0;
+            
+                    .menu-item {
+                        margin: 0 10px;
+    
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+    
+                    &.active {
+                        align-items: center;
+                        display: flex;
                     }
                 }
             }

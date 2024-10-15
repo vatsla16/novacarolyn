@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php /* Template Name: Frontpage */
+get_header(); 
+?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
     $featured_image = get_field('featured_image');
@@ -29,14 +31,14 @@
                                 </li>
                             <?php endforeach; ?>
                         </ul>
-                        <button class="button--secondary see-more mt-3 mb-4">See More</button>
+                        <button class="button--secondary see-more mt-3 mb-4"><a href='/gallery' class="reverse-hover">See More</a></button>
                     <?php endif; ?>
                 </div>
                 <div class="subscription-form">
                     <div class="subscription-form-title mt-4 mb-4">
                         <span>Subscribe to the newsletter</span>
                     </div>
-                    <?php echo do_shortcode('[ninja_form id=2]'); ?>
+                    <?php echo do_shortcode('[newsletter_form]'); ?>
                 </div>
             </div>
         </section>

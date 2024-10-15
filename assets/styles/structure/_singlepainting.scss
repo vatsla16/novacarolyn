@@ -1,6 +1,7 @@
 .single-painting {
     &-section {
         display: grid;
+        align-items: center;
         grid-template-rows: min-content;
         grid-gap: 1rem;
 
@@ -8,7 +9,7 @@
             img {
                 display: block;
                 object-fit: cover;
-                height: 50rem;
+                height: 40rem;
                 width: 100%;
             }
         }

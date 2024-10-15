@@ -62,32 +62,31 @@
 	</header>
 
 	<header class="header header-mobile d-md-none">
-        <div class="header-top mt-4 mb-4">
-            <div class="container">
-                <div class="row header-name no-hover">
-                    <a href="/"><span>Carolyn Vienneau</span></a>
+        <div class="container">
+            <div class="header-mobile-container row">
+                <div class="header-top header-name col-6">
+                    <a class="no-hover" href="/"><span>Carolyn Vienneau</span></a>
                 </div>
-            </div>
-        </div>
-        <div class="header-middle pt-3">
-            <div class="container">
-                <div class="row header-menu">
-                    <button class="hamburger active mb-4" aria-controls="mobile-menu">
+                <div class="header-menu col-6">
+                    <button class="hamburger active" aria-controls="mobile-menu">
                         <i class="fa-solid fa-bars open-menu" aria-hidden="true"></i>
                         <i class="fa-solid fa-x close-menu" aria-hidden="true"></i>
-                        <span class="webaim-hidden">
-                            <?php _e('Toggle Menu', 'novaorigins'); ?>
-                        </span>
+                        <span class="webaim-hidden">Toggle Menu</span>
                     </button>
-                    <?php 
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'header',
-                                'menu_id' => 'header-menu',
-                                'items_wrap' => '<nav class="nav-header-menu" aria-labelledby="nav_header"><h2 id="nav_header" class="webaim-hidden">Header Menu</h2><ul id="%1$s" class="%2$s">%3$s</ul></nav>'
-                            )
-                    ); ?>
                 </div>
+                <nav class="nav-header-menu-mobile" aria-labelledby="nav_header">
+                    <h2 id="nav_header" class="webaim-hidden">Header Menu</h2>
+                    <div class="container">
+                        <?php 
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'header',
+                                    'menu_id' => 'header-menu',
+                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+                                )
+                        ); ?>
+                    </div>
+                </nav>
             </div>
         </div>
         <div class="header-bottom">

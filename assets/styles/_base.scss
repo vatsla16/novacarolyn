@@ -166,3 +166,9 @@ p {
     font-weight: normal;
     src: url('../fonts/AmsterdamTwo/amsterdam-two-ttf.ttf') format('truetype');
 }
+
+.medium {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-style: italic;
+}

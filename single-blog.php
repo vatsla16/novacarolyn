@@ -19,9 +19,11 @@ get_header();
                         <?php echo implode( ' | ', $mediums ); ?>
                     </span>
                 <?php endif; ?>
-                <div class="single-blog-section-image">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                </div>
+                <?php if ($image): ?>
+                    <div class="single-blog-section-image">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                    </div>
+                <?php endif; ?>
                 <div class="container">
                     <div class="single-blog-section-desc"><?php echo $description; ?></div>
                 </div>

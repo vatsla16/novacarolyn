@@ -37,9 +37,9 @@ $blog_query = new WP_Query($blog_args);
                             <div class="blog-right">
                                 <div class="blog-right-top card-body">
                                     <a class="reverse-hover" href="<?php echo esc_url( $permalink ); ?>"><?php echo $title; ?></a>
-                                    <span class="summary"><?php echo $summary; ?></span>
+                                    <?php if ($summary) : ?><span class="summary"><?php echo $summary; ?></span><?php endif; ?>
                                 </div>
-                                <?php if ( $mediums) : ?>
+                                <?php if ($mediums) : ?>
                                     <span class="medium card-footer">
                                         <?php echo implode( ' | ', $mediums ); ?>
                                     </span>

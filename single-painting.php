@@ -7,6 +7,7 @@ get_header();
     $title = get_field('title');
     $description = get_field('description');
     $image = get_field('image');
+    $medium = get_field('painting_medium');
 ?>
 
     <main id="main-content" class="single-painting">
@@ -17,8 +18,9 @@ get_header();
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                     </div>
                     <div class="single-painting-section-left">
-                        <span class="title"><?php echo $title; ?></span>
-                        <p><?php echo $description; ?></p>
+                        <?php if ($title): ?><span class="title"><?php echo $title; ?></span><?php endif; ?>
+                        <?php if ($medium): ?><span class="medium"><?php echo implode( ' | ', $medium ); ?></span><?php endif; ?>
+                        <?php if ($description): ?><p><?php echo $description; ?></p><?php endif; ?>
                     </div>
                 </div>
             </div>

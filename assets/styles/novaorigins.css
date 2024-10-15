@@ -203,6 +203,12 @@ p.no-underline a:hover, p.no-underline a:focus, p.no-underline a:active {
   font-weight: normal;
   src: url("../fonts/AmsterdamTwo/amsterdam-two-ttf.ttf") format("truetype");
 }
+.medium {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-style: italic;
+}
+
 /* THEME STRUCTURE
 ------------------------------------------------------------------------------*/
 .header-name,
@@ -266,22 +272,10 @@ header-bottom span {
     font-weight: 400;
     line-height: 1.4166666667;
   }
-  .header.header-mobile .header-menu .menu,
-  header.header-mobile .header-menu .menu {
-    border-radius: 10px;
-    display: none;
-    flex-direction: column;
-    text-align: center;
+  .header.header-mobile .header-menu .hamburger,
+  header.header-mobile .header-menu .hamburger {
     width: 100%;
-  }
-  .header.header-mobile .header-menu .menu .menu-item,
-  header.header-mobile .header-menu .menu .menu-item {
-    margin: 0 10px;
-  }
-  .header.header-mobile .header-menu .menu.active,
-  header.header-mobile .header-menu .menu.active {
-    align-items: center;
-    display: flex;
+    text-align: end;
   }
   .header.header-mobile .header-menu .hamburger .open-menu,
   header.header-mobile .header-menu .hamburger .open-menu {
@@ -302,6 +296,32 @@ header-bottom span {
   .header.header-mobile .header-menu .hamburger.active .close-menu,
   header.header-mobile .header-menu .hamburger.active .close-menu {
     display: none;
+  }
+  .header.header-mobile .nav-header-menu-mobile,
+  header.header-mobile .nav-header-menu-mobile {
+    padding-top: 20px;
+  }
+  .header.header-mobile .nav-header-menu-mobile .menu,
+  header.header-mobile .nav-header-menu-mobile .menu {
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+  .header.header-mobile .nav-header-menu-mobile .menu .menu-item,
+  header.header-mobile .nav-header-menu-mobile .menu .menu-item {
+    margin: 0 10px;
+  }
+  .header.header-mobile .nav-header-menu-mobile .menu .menu-item a,
+  header.header-mobile .nav-header-menu-mobile .menu .menu-item a {
+    text-decoration: none;
+  }
+  .header.header-mobile .nav-header-menu-mobile .menu.active,
+  header.header-mobile .nav-header-menu-mobile .menu.active {
+    align-items: center;
+    display: flex;
   }
   .header.header-mobile .header-bottom span,
   header.header-mobile .header-bottom span {
@@ -550,13 +570,14 @@ footer-legal p {
 
 .single-painting-section {
   display: grid;
+  align-items: center;
   grid-template-rows: min-content;
   grid-gap: 1rem;
 }
 .single-painting-section-right img {
   display: block;
   object-fit: cover;
-  height: 50rem;
+  height: 40rem;
   width: 100%;
 }
 .single-painting-section-left .title {
@@ -635,36 +656,37 @@ footer-legal p {
 .contact-section-form .nf-form-fields-required {
   display: none;
 }
-.contact-section-form .nf-form-content {
-  text-align: center;
-}
-.contact-section-form .nf-form-content .nf-field-label {
-  width: 50%;
-}
 .contact-section-form .nf-form-content label {
   font-size: 0.85em;
 }
 .contact-section-form .nf-form-content input[type=text], .contact-section-form .nf-form-content input[type=email], .contact-section-form .nf-form-content textarea {
-  background-color: #FBF5F3;
+  background-color: #ffffff;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   padding: 12px;
-  width: 50%;
+  max-width: 100%;
 }
 .contact-section-form .nf-form-content input[type=submit] {
-  border-radius: 4px;
-  padding: 12px 24px;
-  width: 60%;
+  font-weight: 600;
+  width: 100%;
+  background: #233D4D !important;
+  border: 1px solid #233D4D;
+  color: #ffffff;
+  padding: 8px 20px;
+  text-decoration: none;
 }
-@media screen and (max-width: 768px) {
-  .contact-section-form .nf-form-content {
-    text-align: start;
-  }
-  .contact-section-form .nf-form-content .nf-field-label,
-  .contact-section-form .nf-form-content input[type=text], .contact-section-form .nf-form-content input[type=email], .contact-section-form .nf-form-content textarea, .contact-section-form .nf-form-content input[type=submit] {
-    width: 100%;
+.contact-section-form .nf-form-content input[type=submit]:hover, .contact-section-form .nf-form-content input[type=submit]:active, .contact-section-form .nf-form-content input[type=submit]:focus {
+  background: #ffffff !important;
+  border: 1px solid #233D4D;
+  color: #233D4D;
+  text-decoration: underline;
+}
+@media screen and (min-width: 992px) {
+  .contact-section-form .nf-form-content .nf-form-content {
+    margin: 0 auto;
+    width: 50%;
   }
 }
 

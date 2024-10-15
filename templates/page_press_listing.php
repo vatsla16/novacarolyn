@@ -37,8 +37,8 @@ $press_query = new WP_Query($press_args);
                             <div class="blog-right press-right">
                                 <div class="blog-right-top press-right-top card-body">
                                     <a class="reverse-hover" href="<?php echo esc_url( $permalink ); ?>"><?php echo $title; ?></a>
-                                    <span class="summary"><?php echo $summary; ?></span>
-                                    <span class="date mt-4"><?php echo $date; ?></span>
+                                    <?php if ($summary): ?><span class="summary"><?php echo $summary; ?></span><?php endif; ?>
+                                    <?php if ($date): ?><span class="date mt-4"><?php echo $date; ?></span><?php endif; ?>
                                 </div>
                             </div>
                         </div>

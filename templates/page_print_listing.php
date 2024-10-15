@@ -61,4 +61,3 @@ $print_query = new WP_Query($print_args);
 <?php endif; ?>
 
 <?php get_footer();
-//[ninja_form id=4]
