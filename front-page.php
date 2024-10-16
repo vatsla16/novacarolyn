@@ -38,7 +38,7 @@ get_header();
                     <div class="subscription-form-title mt-4 mb-4">
                         <span>Subscribe to the newsletter</span>
                     </div>
-                    <?php echo do_shortcode('[newsletter_form]'); ?>
+                    <?php echo do_shortcode('[mc4wp_form id=142]'); ?>
                 </div>
             </div>
         </section>

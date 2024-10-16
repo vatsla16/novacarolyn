@@ -29,6 +29,8 @@
     }
 
     .subscription-form {
+        margin-bottom: 60px;
+
         &-title {
             @include set-type(24, 100);
 
@@ -37,46 +39,44 @@
             text-transform: uppercase;
         }
 
-        .nf-form-content nf-fields-wrap {
+        .mc4wp-form {
             align-items: center;
             display: flex;
             justify-content: center;
-        }
+            flex-direction: column;
 
-        .nf-form-fields-required {
-            display: none;
-        }
+            &-fields {
+                margin-bottom: 20px;
 
-        .email-container {
-            label {
-                @include set-type(14, 100);
-            }
-
-            .ninja-forms-req-symbol {
-                color: $color-primary;
-            }
-
-            input {
-                border: 0;
-                border-bottom: 1px solid $color-primary;
-            }
-        }
-        .nf-field-container.submit-container {
-            margin-bottom: 0;
-        
-            .submit-button {
-                @include set-type(14, 600);
-
-                background: transparent;
-                color: $color-primary;
-                padding: 8px 20px;
-                text-decoration: none;
-
-                &:hover,
-                &:active,
-                &:focus {
-                    text-decoration: underline;
+                label {
+                    @include set-type(14, 100);
                 }
+
+                input[type='email'] {
+                    background: transparent;
+                    border: 0;
+                    border-bottom: 1px solid $color-primary;
+                    margin: 0 20px;
+                }
+
+                input[type='submit'] {
+                    @include set-type(14, 600);
+    
+                    background: transparent;
+                    color: $color-primary;
+                    text-decoration: none;
+                    border: 0;
+    
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .mc4wp-response {
+                font-style: italic;
             }
         }
     }
@@ -109,6 +109,10 @@
                     }
                 }
             }
+        }
+
+        .subscription-form {
+            margin-bottom: 30px;
         }
     }
 }

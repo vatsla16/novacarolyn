@@ -507,6 +507,9 @@ footer-legal p {
   object-fit: cover;
   width: 300px;
 }
+.homepage .subscription-form {
+  margin-bottom: 60px;
+}
 .homepage .subscription-form-title {
   font-size: 1.5em;
   font-weight: 100;
@@ -515,40 +518,40 @@ footer-legal p {
   text-align: center;
   text-transform: uppercase;
 }
-.homepage .subscription-form .nf-form-content nf-fields-wrap {
+.homepage .subscription-form .mc4wp-form {
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
-.homepage .subscription-form .nf-form-fields-required {
-  display: none;
+.homepage .subscription-form .mc4wp-form-fields {
+  margin-bottom: 20px;
 }
-.homepage .subscription-form .email-container label {
+.homepage .subscription-form .mc4wp-form-fields label {
   font-size: 0.875em;
   font-weight: 100;
   line-height: 1.7142857143;
 }
-.homepage .subscription-form .email-container .ninja-forms-req-symbol {
-  color: #233D4D;
-}
-.homepage .subscription-form .email-container input {
+.homepage .subscription-form .mc4wp-form-fields input[type=email] {
+  background: transparent;
   border: 0;
   border-bottom: 1px solid #233D4D;
+  margin: 0 20px;
 }
-.homepage .subscription-form .nf-field-container.submit-container {
-  margin-bottom: 0;
-}
-.homepage .subscription-form .nf-field-container.submit-container .submit-button {
+.homepage .subscription-form .mc4wp-form-fields input[type=submit] {
   font-size: 0.875em;
   font-weight: 600;
   line-height: 1.7142857143;
   background: transparent;
   color: #233D4D;
-  padding: 8px 20px;
   text-decoration: none;
+  border: 0;
 }
-.homepage .subscription-form .nf-field-container.submit-container .submit-button:hover, .homepage .subscription-form .nf-field-container.submit-container .submit-button:active, .homepage .subscription-form .nf-field-container.submit-container .submit-button:focus {
+.homepage .subscription-form .mc4wp-form-fields input[type=submit]:hover, .homepage .subscription-form .mc4wp-form-fields input[type=submit]:active, .homepage .subscription-form .mc4wp-form-fields input[type=submit]:focus {
   text-decoration: underline;
+}
+.homepage .subscription-form .mc4wp-form .mc4wp-response {
+  font-style: italic;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .homepage .featured-painting-section ul img {
@@ -565,6 +568,9 @@ footer-legal p {
   }
   .homepage .featured-painting-section-items .featured-painting-section-item img {
     width: 500px;
+  }
+  .homepage .subscription-form {
+    margin-bottom: 30px;
   }
 }
 
