@@ -5,6 +5,7 @@ get_header();
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
     $featured_image = get_field('featured_image');
     $featured_items = get_field('featured_items');
+    $classes = get_field('classes');
 ?>
 
     <main id="main-content" class="homepage">
@@ -34,12 +35,25 @@ get_header();
                         <button class="button--secondary see-more mt-3 mb-4"><a href='/gallery' class="reverse-hover">See More</a></button>
                     <?php endif; ?>
                 </div>
-                <div class="subscription-form">
+            </div>
+                <?php if($classes): ?>
+                    <div class="classes mt-4 mb-4">
+                        <div class="container">
+                            <div class="classes-title">
+                                <span>Class Schedule</span>
+                            </div>
+                            <?php echo $classes; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <!-- Newsletter for future use -->
+                <!-- <div class="subscription-form">
                     <div class="subscription-form-title mt-4 mb-4">
                         <span>Subscribe to the newsletter</span>
                     </div>
-                    <?php echo do_shortcode('[mc4wp_form id=116]'); ?>
-                </div>
+                    <?php //echo do_shortcode('[mc4wp_form id=116]'); ?>
+                </div> -->
             </div>
         </section>
     </main>

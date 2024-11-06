@@ -1,5 +1,10 @@
 .header,
 header {
+    ol,
+    ul {
+        list-style-type: none;
+    }
+
     &-name  {
         @include set-type(38, 400);
 
@@ -57,48 +62,6 @@ header {
                 @include set-type(24, 400);
             }
 
-            // .header-menu {
-            //     .menu {
-            //         border-radius: 10px;
-            //         display: none;
-            //         flex-direction: column;
-            //         text-align: center;
-            //         width: 100%;
-            
-            //         .menu-item {
-            //             margin: 0 10px;
-            //         }
-
-            //         &.active {
-            //             align-items: center;
-            //             display: flex;
-            //         }
-            //     }
-
-            //     .hamburger {
-            //         .open-menu {
-            //             display: none;
-            //         }
-    
-            //         .close-menu {
-            //             display: block;
-            //             transition: all 0.3s ease-in-out;
-            //             -webkit-transition: all 0.3s ease-in-out;
-            //         }
-
-            //         &.active {
-            //             .open-menu {
-            //                 display: block;
-            //                 transition: all 0.3s ease-in-out;
-            //                 -webkit-transition: all 0.3s ease-in-out;
-            //             }
-        
-            //             .close-menu {
-            //                 display: none;
-            //             }
-            //         }
-            //     }
-            // }
             .header-menu {
                 .hamburger {
                     width: 100%;

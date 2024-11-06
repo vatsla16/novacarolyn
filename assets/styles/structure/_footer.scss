@@ -1,5 +1,10 @@
 .footer,
 footer {
+    ol,
+    ul {
+        list-style-type: none;
+    }
+
     &-social nav {
         justify-content: space-around;
 

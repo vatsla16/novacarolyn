@@ -158,11 +158,6 @@ p:last-child {
   margin-bottom: 0;
 }
 
-ol,
-ul {
-  list-style-type: none;
-}
-
 @media screen and (max-width: 991px) {
   h1,
   .h1 {
@@ -211,6 +206,12 @@ p.no-underline a:hover, p.no-underline a:focus, p.no-underline a:active {
 
 /* THEME STRUCTURE
 ------------------------------------------------------------------------------*/
+.header ol,
+.header ul,
+header ol,
+header ul {
+  list-style-type: none;
+}
 .header-name,
 header-name {
   font-size: 2.375em;
@@ -331,6 +332,12 @@ header-bottom span {
   }
 }
 
+.footer ol,
+.footer ul,
+footer ol,
+footer ul {
+  list-style-type: none;
+}
 .footer-social nav,
 footer-social nav {
   justify-content: space-around;
@@ -504,8 +511,20 @@ footer-legal p {
 .homepage .featured-painting-section-items img {
   border-radius: 5px;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   width: 300px;
+}
+.homepage .classes {
+  background-color: #233D4D;
+  padding: 40px 0;
+  color: #ffffff;
+}
+.homepage .classes-title {
+  font-size: 1.125em;
+  line-height: 1.5555555556;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .homepage .subscription-form {
   margin-bottom: 60px;
@@ -569,6 +588,14 @@ footer-legal p {
   .homepage .featured-painting-section-items .featured-painting-section-item img {
     width: 500px;
   }
+  .homepage .classes {
+    padding: 20px 0;
+  }
+  .homepage .classes-title {
+    font-size: 0.875em;
+    line-height: 1.7142857143;
+    margin-bottom: 10px;
+  }
   .homepage .subscription-form {
     margin-bottom: 30px;
   }
@@ -582,7 +609,7 @@ footer-legal p {
 }
 .single-painting-section-right img {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   height: 40rem;
   width: 100%;
 }
@@ -612,7 +639,7 @@ footer-legal p {
 }
 .single-blog-section-image img {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   height: 40rem;
   width: 100%;
 }
