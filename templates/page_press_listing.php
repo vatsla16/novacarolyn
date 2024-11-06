@@ -48,6 +48,16 @@ $press_query = new WP_Query($press_args);
         </section>
     </main>
 
+<?php else: ?>
+
+    <main id="main-content" class="press-coming-soon">
+        <section id="page-content">
+            <div class="container">
+                <div class="press-coming-soon-title">Press and/or event articles coming soon!</div>
+            </div>
+        </section>
+    </main>
+
 <?php endif; ?>
 
 <?php get_footer();

@@ -492,6 +492,15 @@ footer-legal p {
   }
 }
 
+.press-coming-soon {
+  margin: 40px 0;
+}
+.press-coming-soon-title {
+  font-size: 1.125em;
+  line-height: 1.5555555556;
+  text-align: center;
+}
+
 .homepage .featured-section img {
   width: 100%;
 }
@@ -504,6 +513,7 @@ footer-legal p {
   line-height: 1.25;
 }
 .homepage .featured-painting-section-items {
+  list-style: none;
   align-items: center;
   display: flex;
   justify-content: space-between;

@@ -1,0 +1,9 @@
+.press-coming-soon {
+    margin: 40px 0;
+
+    &-title {
+        @include set-type(18);
+
+        text-align: center;
+    }
+}
